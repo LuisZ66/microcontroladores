@@ -17,8 +17,8 @@ void loop(){
   B=digitalRead(10);
 
 
-  }
-  if(A==HIGH && B ==LOW){
+  
+  if(A==HIGH && B==LOW){
   
  digitalWrite(7,HIGH); 
  delay(6000);  
@@ -40,10 +40,22 @@ void loop(){
                  
   }
   
-   else{
+   if(B==HIGH && A==LOW){
     digitalWrite(6,HIGH);
     delay(500);
     digitalWrite(6,LOW);
     delay(500);
    }
+  
+  if(A==HIGH && B ==HIGH){
+    digitalWrite(6,HIGH);
+    delay(500);
+    digitalWrite(6,LOW);
+    delay(500);
+  }
+  else{
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+ }
 }
